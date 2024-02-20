@@ -1,0 +1,16 @@
+
+#spring:
+#  application:
+#    name:       viso-user-service
+
+#  profiles:
+#    active:     default,dev,prod
+#    default:    default
+
+#  cloud:
+#    config:
+#      #uri: http://localhost:8888
+#      enabled: false
+
+#  config:
+#    import:     configserver

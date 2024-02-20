@@ -1,0 +1,20 @@
+
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: viso-pod
+  labels:
+    app: userserviceapp
+
+spec:
+  containers:
+    - name: userservice
+      image: longlethanh/userservice
+      ports:
+        - containerPort : 9000
+
+#    - name: walletservice
+#      image: longlethanh/walletservice
+#      ports:
+#        - containerPort : 9090

@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: viso-deployment
+
+spec:
+  replicas: 3
+  # create pods using pod definition in this template
+  template:
+    metadata:
+      labels:
+        app: viso-deployment
+    spec:
+      containers:
+        - name: userservice
+          image: longlethanh/userservice
+          ports:
+            - containerPort: 9000
+  selector:
+    matchLabels:
+      app: viso-deployment
+
+#        - name: walletservice
+#          image: longlethanh/walletservice
+#          ports:
+#            - containerPort : 9090
